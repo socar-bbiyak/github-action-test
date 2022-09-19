@@ -13,4 +13,4 @@ jobs:
           image_name: bbiyak-fastapi-github-action
           image_tag: latest,v1
           dockerfile: ./Dockerfile
-          context: ./Dockerfile
+          context: .
