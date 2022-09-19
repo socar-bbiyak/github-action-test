@@ -1,0 +1,16 @@
+name: Push to GCR GitHub Action
+on: [push]
+jobs:
+  build-and-push-to-gcr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: RafikFarhad/push-to-gcr-github-action@v4.1
+        with:
+          gcloud_service_key: ${{ secrets.GCP_SECRETS }} # can be base64 encoded or plain text
+          registry: gcr.io
+          project_id: socar-data-dev
+          image_name: bbiyak-fastapi-github-action
+          image_tag: latest,v1
+          dockerfile: .
+          context: .
