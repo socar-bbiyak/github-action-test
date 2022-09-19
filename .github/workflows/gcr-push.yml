@@ -12,5 +12,5 @@ jobs:
           project_id: socar-data-dev
           image_name: bbiyak-fastapi-github-action
           image_tag: latest,v1
-          dockerfile: ./docker/Dockerfile.prod
-          context: ./docker
+          dockerfile: ./Dockerfile
+          context: ./Dockerfile
